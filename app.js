@@ -6,25 +6,33 @@ const axios = require('axios');
 const http = require('http');
 
 
+// create application/x-www-form-urlencoded parser
+
+
+
 //initialize express
 const app = express();
 const port = process.env.PORT || 3000;
 
-
+//declare static folder
+app.use(express.static('public'));
+app.use( bodyParser.urlencoded({ extended: true })) 
 
 //get the request 
 app.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname) + 'signup.html')
+    res.sendFile(__dirname + '/signup.html') 
 })
 
-
+app.post('/', (req, res, next) => {
+   
+    const fName = req.body.firstName;
+    const lName = req.body.lastName;
+    console.log(fName, lName)
+})
 
 
 
 //initialize server
-http.createServer((request, response) => {
-    response.writeHead(200)
-})
-.listen(parseInt(port,10), () =>{
+app.listen(port, () =>{
     console.log('Server is running on port : ' + port)
 })
