@@ -1,0 +1,19 @@
+{
+  "name": "signup",
+  "version": "1.0.0",
+  "description": "'SignUp API'",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VernoB/signUpProject.git"
+  },
+  "author": "Vernob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VernoB/signUpProject/issues"
+  },
+  "homepage": "https://github.com/VernoB/signUpProject#readme"
+}
